@@ -10,13 +10,3 @@ services:
         value: production
       - key: PORT
         value: 3001
-
-  - type: web
-    name: render-frontend
-    env: static
-    buildCommand: npm install && npm run build
-    staticPublishPath: build
-    rootDir: frontend
-    envVars:
-      - key: NODE_ENV
-        value: production
