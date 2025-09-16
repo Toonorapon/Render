@@ -26,6 +26,7 @@ const testConnection = async () => {
     client.release();
     return true;
   } catch (error) {
+    console.log(dbConfig);
     console.error('❌ Database connection failed:', error.message);
     return false;
   }
