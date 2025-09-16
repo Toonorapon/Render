@@ -10,7 +10,7 @@ services:
       - key: PORT
         value: 3001
       - key: DB_HOST
-        value: dpg-d339m9adbo4c73b1dg10-a.singapore-postgres.render.com
+        value: dpg-d339m9adbo4c73b1dg10-a
       - key: DB_USER
         value: wtp_user
       - key: DB_PASSWORD
