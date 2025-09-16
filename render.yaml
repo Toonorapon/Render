@@ -1,20 +1,11 @@
 services:
   - type: web
-    name: render-backend
+    name: render-poc-app
     env: node
-    buildCommand: cd backend && npm install
-    startCommand: cd backend && npm start
+    buildCommand: npm run build
+    startCommand: npm start
     envVars:
       - key: NODE_ENV
         value: production
       - key: PORT
         value: 3001
-
-  # - type: web
-  #   name: render-frontend
-  #   env: static
-  #   buildCommand: cd frontend && npm install && npm run build
-  #   staticPublishPath: frontend/build
-  #   envVars:
-  #     - key: NODE_ENV
-  #       value: production

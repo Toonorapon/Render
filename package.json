@@ -4,10 +4,16 @@
   "description": "Render POC with React frontend and Node.js backend",
   "main": "backend/server.js",
   "scripts": {
-    "build": "cd backend && npm install",
+    "build": "npm run build:frontend && npm run build:backend",
+    "build:frontend": "cd frontend && npm install && npm run build:backend",
+    "build:backend": "cd backend && npm install",
     "start": "cd backend && npm start",
-    "install": "cd backend && npm install",
-    "dev": "cd backend && npm run dev"
+    "install": "npm run install:frontend && npm run install:backend",
+    "install:frontend": "cd frontend && npm install",
+    "install:backend": "cd backend && npm install",
+    "dev": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm start",
+    "dev:backend": "cd backend && npm run dev"
   },
   "keywords": ["render", "poc", "react", "nodejs"],
   "author": "Toonorapon",
